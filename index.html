@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>2022 Vancouver Island Interclub</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.13.1/b-2.3.3/b-html5-2.3.3/b-print-2.3.3/datatables.min.css"/>
+ 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.13.1/b-2.3.3/b-html5-2.3.3/b-print-2.3.3/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class = "row">
+        <div class = "col">
+            <label class="control-label" id = "Name-label" for = "Name">Name</label>
+            <input id = "Name" type = "text" value = ""> </input>
+        </div>
+        <div class = "col">
+            <label class="control-label" id="Club-label" for="Club">Skater's Home Club</label>
+            <div>
+                <select id="Club" class="form-control">
+                    <option selected>All</option>
+                </select>
+            </div>
+        </div>
+        <div class = "col">
+            <label class="control-label" id="Event-label" for="Event">Event</label>
+            <div>
+                <select id="Event" class="form-control">
+                    <option selected>All</option>
+                </select>
+            </div>
+        </div>
+        <div class = "col">
+            <label class="control-label" id="Group-label" for="Group">Group</label>
+            <div>
+                <select id="Group" class="form-control" style = "width: 100%">
+                    <option selected>Select an Event</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col">
+            <label class="control-label" id="Competition-label" for="Competition">Competition</label>
+            <div>
+                <select id="Competition" class="form-control">
+                    <option selected>2022 Vancouver Island Interclub</option>
+                    <option>Jungle Blades</option>
+                    <option>2022 Okanagan Interclub</option>
+                </select>
+            </div>
+        </div>
+        <div class = "col">
+            <label class="control-label" id="Start-label" for="Start">Start Date</label>
+            <div>
+                <select id="Start" class="form-control">
+                    <option selected>Friday - Nov 18</option>
+                    <option>Saturday - Nov 19</option>
+                    <option>Sunday - Nov 20</option>
+                </select>
+            </div>
+        </div>
+        <div class = "col">
+            <label class="control-label" id="End-label" for="End">End Date</label>
+            <div>
+                <select id="End" class="form-control">
+                    <option>Friday - Nov 18</option>
+                    <option>Saturday - Nov 19</option>
+                    <option selected>Sunday - Nov 20</option>
+                </select>
+            </div>
+        </div>
+        <div class = "col">
+            <button
+                class="search-button"
+                id="Search"
+                style="width:100%; margin-top: 22px;"
+                type="button"
+                onclick = "search();"
+            >Search</button>
+        </div>
+    </div>
+    <div id="resultUI" style = "padding: 10px;"></div>
+</div>
+</body>
+</html>
